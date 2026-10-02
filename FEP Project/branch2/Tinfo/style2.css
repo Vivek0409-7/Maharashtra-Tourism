@@ -1,0 +1,480 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --primary-color: #78350f;
+    --secondary-color: #b45309;
+    --bg-color: #fffbeb;
+    --card-bg: #ffffff;
+    --text-color: #1f2937;
+
+    --primary: #E67E22;        /* Heritage Saffron Orange */
+    --primary-hover: #D35400;  /* Deep Orange */
+    --secondary: #1F3044;      /* Deep Navy Blue */
+    --white: #FFFFFF;
+    --text-main: #2C3E50;
+    --text-muted: #667085;
+    
+    /* Rich Cultural Background Options */
+    --bg-main: #FDF9F2;        /* Warm Cream Base */
+    --bg-card: #FFFFFF;
+    
+    --shadow-sm: 0 4px 12px rgba(31, 48, 68, 0.05);
+    --shadow-md: 0 10px 30px rgba(31, 48, 68, 0.08);
+    --shadow-lg: 0 16px 32px rgba(0, 0, 0, 0.25);
+}
+
+[data-theme="dark"] {
+    --primary-color: #f59e0b;       /* Lighter warm amber for contrast */
+    --secondary-color: #d97706;     /* Rich amber secondary */
+    --bg-color: #121212;            /* Deep dark background */
+    --card-bg: #1e1e1e;             /* Slightly lighter card surface */
+    --text-color: #f3f4f6;          /* Off-white readable text */
+
+    /* Complementary to your second set (Heritage Saffron & Deep Navy theme) */
+    --primary: #F39C12;             /* Brighter Heritage Saffron for dark mode */
+    --primary-hover: #E67E22;       /* Hover state matching original primary */
+    --secondary: #ffffff;           /* Lighter navy/slate tone for dark surfaces */
+    --white: #FFFFFF;               /* Kept for explicit white elements */
+    --text-main: #ECF0F1;           /* Soft light gray for main text */
+    --text-muted: #95A5A6;          /* Muted gray-blue for secondary text */
+    
+    /* Rich Cultural Dark Background Options */
+    --bg-main: #121212;             /* Deep cultural dark navy/charcoal base */
+    --bg-card: #131C2E;             /* Elevated card background with a hint of navy */
+    
+    /* Adjusted Shadows for Dark Mode (softer, glowing effect) */
+    --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 16px 32px rgba(0, 0, 0, 0.6);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    transition: background-color 0.4s ease-in-out, 
+                color 0.4s ease-in-out;
+}
+
+
+
+.lead {
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMpeW0QwRr1jj9_QBw7LSo34Fc1P_k0ITe9Tc4y-__nKsxCt_7v-Vuovk&s=10') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 10rem 3rem;
+}
+
+.lead h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+
+.lead p {
+    font-size: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+header {
+    background-color: var(--bg-main); /* Matches logo background */
+    border-bottom: 2px solid rgba(230, 126, 34, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow-sm);
+    backdrop-filter: blur(8px);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0.75rem 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Space between logo image and text */
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary);
+    text-decoration:none;
+}
+
+.logo-img {
+    height: 52px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 6px;
+}
+.brand-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    letter-spacing: -0.5px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--secondary);
+    font-weight: 500;
+    font-size: 0.95rem;
+    position: relative;
+    padding: 0.25rem 0;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.theme-btn {
+    background: none;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+
+/*   Main section */
+.search-container input {
+    width: 100%;
+    max-width: 450px;
+    padding: 0.75rem 1rem;
+    border-radius: 25px;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.intro {
+    background: var(--card-bg);
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
+    border-left: 5px solid var(--secondary-color);
+}
+
+.category-section {
+    margin-bottom: 2.5rem;
+}
+
+.category-section h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-wrapper {
+    width: 100%;
+}
+
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Fits the image proportionally inside the box without distortion */
+    transition: transform 0.4s ease;
+    border-radius: 10px;
+    
+}
+
+.card:hover .card-img-wrapper img {
+    transform: scale(1.05);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+}
+
+.location-tag {
+    font-size: 0.85rem;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.card p {
+    margin-bottom: 0;
+}
+
+/* --- NEW: Interactive Side-by-Side Module Styles --- */
+
+.ashtavinayak-interactive-container {
+    margin-top: 3rem;
+    background: #ffffff;
+    color: #f8fafc;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+.interactive-title {
+    color: #b45309;
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+    font-size: 1.4rem;
+}
+
+/* Half and Half Split View Layout */
+.split-view {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .split-view {
+        flex-direction: row;
+        align-items: stretch;
+    }
+    .tracker-panel, .map-panel {
+        flex: 1; /* Half-and-Half split */
+        width: 50%;
+    }
+}
+
+/* Left Tracker Panel */
+.tracker-panel {
+    background: #ffffff;
+    padding: 1.25rem;
+    border-radius: 10px;
+    border: 1px solid #fdfdfd;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid #334155;
+    padding-bottom: 0.75rem;
+}
+
+.tag {
+    background: #b45309;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 2px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+#yatra-temple-title {
+    margin: 0.5rem 0 0 0;
+    font-size: 1.3rem;
+    color: #1f2937;
+}
+
+.progress-badge {
+    background: #f8f9fa;
+    color: #b45309;
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.loc-text {
+    color: #1f2937;
+    font-size: 0.85rem;
+    margin: 0.5rem 0;
+}
+
+.desc-text {
+    font-size: 0.9rem;
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+.meta-box-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.meta-box {
+    background: #ffffff;
+    padding: 0.6rem;
+    border-radius: 6px;
+    border: 1px solid #334155;
+}
+
+.meta-label {
+    display: block;
+    font-size: 0.7rem;
+    color: #1f2937;
+    text-transform: uppercase;
+}
+
+.meta-val {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #b45309;
+}
+
+/* Step Node Navigation Buttons */
+.nodes-wrapper {
+    display: flex;
+    gap: 0.4rem;
+    overflow-x: auto;
+    padding: 0.5rem 0;
+    margin-bottom: 1rem;
+}
+
+.node-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #475569;
+    background: #3b291e;
+    color: #94a3b8;
+    font-weight: bold;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.node-btn.active {
+    background: #b45309;
+    color: white;
+    border-color: #b45309;
+    transform: scale(1.1);
+}
+
+/* Buttons */
+.flex-btn {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.nav-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: none;
+    background: #b45309;
+    color: white;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background 0.2s;
+}
+
+.nav-btn:hover:not(:disabled) {
+    background: #475569;
+}
+
+.nav-btn.primary-btn {
+    background: #b45309;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-btn.primary-btn:hover:not(:disabled) {
+    background: #d97706;
+}
+
+.nav-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* Right Map Panel */
+.map-panel {
+    min-height: 320px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #334155;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #1f2937;
+    color: white;
+    margin-top: 3rem;
+}
