@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aagman - Maharashtra Cultural & Heritage Tourism</title>
+    <!-- LINK TO EXTERNAL CSS FILE -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+           <a href="#" class="logo">
+                <img src="FEP logo.png" alt="Aagman Logo" class="logo-img"> 
+                <span class="brand-title">Aagman</span>
+           </a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+            <li><a href="#discover">Discover Maharashtra</a></li>
+            <li><a href="#interest">Tourist Interest</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="video-background">
+            <!-- Fallback image if the video doesn't load -->
+            <video autoplay muted loop playsinline poster="fallback-image.jpg">
+                <source src="start.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+            <!-- Optional: Dark overlay to make text readable -->
+            <div class="video-overlay"></div>
+        </div>
+    
+        </div>
+        <h1>Discover Your Next Adventure</h1>
+        <p>Explore historic forts, ancient cave architecture, sacred temples, and rich traditions.</p>
+        
+        <div class="search-container">
+            <!-- ID USED BY JS FOR SEARCH -->
+            <input type="text" id="searchInput" placeholder="Search destination (e.g., Raigad Fort, Mahabaleshwar)...">
+            <button class="btn-search" id="searchBtn">Search</button>
+        </div>
+    </section>
+
+<!-- Discover Maharashtra Highlights -->
+<!-- ========================================================= -->
+<!-- FEATURED SHOWCASE SLIDER SECTION                           -->
+<!-- ========================================================= -->
+<section class="about-section" id="discover">
+    <section class="featured-showcase-root" id="featured-showcase-container" id="discover">
+    <h2 class="section-title">Discover Maharashtra</h2>
+    <!-- Dynamic Background Layer (Displays blurred version of active image) -->
+    <div class="showcase-bg-backdrop" id="showcase-bg-layer"></div>
+
+    <!-- Main Display Viewport -->
+    <div class="showcase-card-viewport">
+        
+        <!-- Left Navigation Button -->
+        <button class="showcase-nav-btn showcase-prev-btn" id="showcase-prev-trigger" aria-label="Previous">&lt;</button>
+
+        <!-- Cards Container -->
+        <div class="showcase-slides-wrapper">
+        
+        <!-- Slide 1: Statue of Unity -->
+        <article class="showcase-card showcase-active">
+            <img src="https://s7ap1.scene7.com/is/image/incredibleindia/shaniwar-wada-pune-maharashtra-1-attr-hero?qlt=82&ts=1742184639448" alt="Shaniwar Wada ">
+            <div class="showcase-text-overlay">
+            <h2>Shaniwar Wada</h2>
+            <p class="showcase-location">Shaniwar Peth, Pune</p>
+            </div>
+        </article>
+
+        <!-- Slide 2: Ajanta & Ellora Caves -->
+        <article class="showcase-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6_CCCABZuiimhaCP4lFZSgfiDvEWBrst3xMKqeEiGf80FSzoh_RjbcRQ&s=10" alt="Ajanta & Ellora Caves">
+            <div class="showcase-text-overlay">
+            <h2>Ajanta & Ellora Caves</h2>
+            <p class="showcase-location">Chhatrapati Sambhajinagar</p>
+            </div>
+        </article>
+
+        <!-- Slide 3: Raigad Fort -->
+        <article class="showcase-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQauWbiGlKZbmmxxWWuR17RWqT1c3U-i7h8fRkNco_SSA&s" alt="Raigad Fort">
+            <div class="showcase-text-overlay">
+            <h2>Raigad Fort</h2>
+            <p class="showcase-location">Raigad</p>
+            </div>
+        </article>
+
+        <!-- Slide 4: Mahabaleshwar -->
+        <article class="showcase-card">
+            <img src="https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?auto=format&fit=crop&w=1400&q=80" alt="Mahabaleshwar">
+            <div class="showcase-text-overlay">
+            <h2>Mahabaleshwar</h2>
+            <p class="showcase-location">Satara</p>
+            </div>
+        </article>
+
+        <!-- Slide 5: Shivneri Fort -->
+        <article class="showcase-card">
+            <img src="https://flybtc.blr1.digitaloceanspaces.com/ncl/blog/e2zD06mxowm7fozVxASFHCekRwUnCo7WujHcfGf9.webp" alt="Shivneri Fort">
+            <div class="showcase-text-overlay">
+            <h2>Shivneri Fort</h2>
+            <p class="showcase-location">Junnar, Pune</p>
+            </div>
+        </article>
+
+        </div>
+
+        <!-- Right Navigation Button -->
+        <button class="showcase-nav-btn showcase-next-btn" id="showcase-next-trigger" aria-label="Next">&gt;</button>
+    </div>
+    </section>
+</section>
+<!-- ================= END FEATURED SHOWCASE SLIDER ================= -->
+
+
+<!-- ================= TOURISM CAROUSEL START ================= -->
+    <section id="interest">
+        <div class="ls3d-wrapper" id="ls3d-component"><p id="CAROUSEL1">Tourist Interest</p>
+        <button class="ls3d-arrow ls3d-arrow-left" id="ls3d-prev-control" aria-label="Previous">&lt;</button>
+        
+        <div class="ls3d-viewport">
+            <div class="ls3d-item">
+            <img src="https://www.pugdundeesafaris.com/blog/wp-content/uploads/2022/01/WhatsApp-Image-2024-05-08-at-13.27.45-1.webp" alt="Wildlife">
+            <div class="ls3d-overlay">
+                <h3 class="ls3d-title">Wildlife</h3>
+                <button class="ls3d-action-btn">EXPLORE</button>
+            </div>
+            </div>
+
+            <div class="ls3d-item">
+            <img src="https://i.pinimg.com/736x/ce/8d/52/ce8d52bff1a32eda69528651c0c169ff.jpg" alt="Heritage">
+            <div class="ls3d-overlay">
+                <h3 class="ls3d-title">Spiritual Sites</h3>
+                <button class="ls3d-action-btn"><a href="../branch2/Tinfo/branch2.html">EXPLORE</a></button>
+            </div>
+            </div>
+
+            <div class="ls3d-item">
+            <img src="https://s7ap1.scene7.com/is/image/incredibleindia/kopeshwar-temple-kolhapur-maharashtra-hero?qlt=82&ts=17266689923430" alt="Gandhi Circuit">
+            <div class="ls3d-overlay">
+                <h3 class="ls3d-title">Heritage Sites</h3>
+                <button class="ls3d-action-btn">EXPLORE</button>
+            </div>
+            </div>
+
+            <div class="ls3d-item">
+            <img src="https://static.india.com/wp-content/uploads/2024/08/frst-2024-08-06T180750.828.jpg?impolicy=Medium_Widthonly&w=400&h=800" alt="Beach">
+            <div class="ls3d-overlay">
+                <h3 class="ls3d-title">Beaches</h3>
+                <button class="ls3d-action-btn">EXPLORE</button>
+            </div>
+            </div>
+
+            <div class="ls3d-item" >
+            <img src="https://c.ndtvimg.com/gws/ms/historical-forts-to-visit-in-maharashtra/assets/9.jpeg?1731315236" alt="Architecture" >
+            <div class="ls3d-overlay">
+                <h3 class="ls3d-title">Forts and Hills</h3>
+                <button class="ls3d-action-btn"><a href="../branch 1/Ginfo/branch1.html">EXPLORE</a></button>
+            </div>
+            </div>
+        </div>
+
+        <button class="ls3d-arrow ls3d-arrow-right" id="ls3d-next-control" aria-label="Next">&gt;</button>
+        </div>
+    </section>
+    
+<!-- ================= TOURISM CAROUSEL END ================= -->
+
+    <footer>
+        <p>&copy; 2026 Maharashtra Cultural & Heritage Tourism. All rights reserved.</p>
+    </footer>
+    <!-- LINK TO EXTERNAL JAVASCRIPT FILE -->
+    <script src="script.js"></script>
+</body>
+</html>

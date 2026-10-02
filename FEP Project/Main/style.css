@@ -1,0 +1,676 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --primary: #E67E22;        /* Heritage Saffron Orange */
+    --primary-hover: #D35400;  /* Deep Orange */
+    --secondary: #1F3044;      /* Deep Navy Blue */
+    --white: #FFFFFF;
+    --text-main: #2C3E50;
+    --text-muted: #667085;
+    
+    /* Rich Cultural Background Options */
+    --bg-main: #FDF9F2;        /* Warm Cream Base */
+    --bg-card: #FFFFFF;
+    
+    --shadow-sm: 0 4px 12px rgba(31, 48, 68, 0.05);
+    --shadow-md: 0 10px 30px rgba(31, 48, 68, 0.08);
+    --shadow-lg: 0 16px 32px rgba(0, 0, 0, 0.25);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* Multi-tone Radial Warm Cream Background with subtle Saffron & Slate accents */
+    background: 
+        radial-gradient(circle at 10% 20%, rgba(230, 126, 34, 0.06) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(31, 48, 68, 0.05) 0%, transparent 40%),
+        linear-gradient(135deg, #FAF4E8 0%, #F5EBE0 50%, #FAF4E8 100%);
+    background-color: #FAF4E8 !important;
+    background-attachment: fixed;
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--bg-main); /* Matches logo background */
+    border-bottom: 2px solid rgba(230, 126, 34, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow-sm);
+    backdrop-filter: blur(8px);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0.75rem 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Space between logo image and text */
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary);
+    text-decoration:none;
+}
+
+.logo-img {
+    height: 52px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 6px;
+}
+.brand-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    letter-spacing: -0.5px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--secondary);
+    font-weight: 500;
+    font-size: 0.95rem;
+    position: relative;
+    padding: 0.25rem 0;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero {
+    height: 45em;
+    /* min-height: 520px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    text-align: center;
+    padding: 0 1.5rem 3rem;
+    
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+    max-width: 650px;
+}
+
+/* Container to fix the video in the background */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1; /* Pushes the video behind all other content */
+}
+
+/* Ensures the video covers the entire screen proportionally */
+.video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+/* Optional dark tint to improve text contrast */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Search Bar */
+.search-container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 0.4rem 0.5rem 0.4rem 1.5rem;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: var(--shadow-lg);
+    max-width: 650px;
+    width: 100%;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    background: #FFFFFF;
+    padding: 0.4rem 0.5rem 0.4rem 1.2rem;
+    border-radius: 50px;
+    box-shadow: var(--shadow-lg);
+    max-width: 600px;
+    width: 100%;
+}
+
+.search-container input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 0.5rem;
+    background: transparent;
+}
+
+.btn-search {
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    padding: 0.8rem 1.8rem;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.btn-search:hover {
+    background-color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(230, 126, 34, 0.3);
+}
+
+
+
+.about-section {
+    background: rgba(255, 255, 255, 0.6);
+    text-align: center;
+}
+
+.about-text {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--text-main);
+}
+
+.discover-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit; /* Keeps the text color the same as normal text */
+    display: block; /* Ensures the whole card area is clickable */
+}
+
+/* Hover effect ("pop up" / lift effect) */
+.card-link:hover .info-card {
+    transform: translateY(-8px) scale(1.02); /* Lifts and slightly enlarges the card */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adds a pop-out shadow */
+}
+
+.info-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    border-top: 4px solid var(--primary);
+    box-shadow: var(--shadow-md);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.info-card h3 {
+    color: var(--secondary);
+    margin-bottom: 0.75rem;
+}
+
+/* Destination Cards (Without Price / Button) */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden; /* Keeps zoomed image inside rounded corners */
+    box-shadow: var(--shadow-md);
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+                box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: 1px solid rgba(230, 126, 34, 0.12);
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02); /* Pop-up card effect */
+    box-shadow: 0 20px 35px rgba(230, 126, 34, 0.25); /* Warm saffron glow */
+    border-color: var(--primary);
+}
+
+.card:hover img {
+    transform: scale(1.12); /* Image pop-up zoom */
+    filter: brightness(1.08); /* Enhances brightness on hover */
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+                filter 0.5s ease;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-body h3 {
+    color: var(--secondary);
+    margin-bottom: 0.5rem;
+}
+
+.card-body p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+
+/* Section Styling */
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    /* background: linear-gradient(0deg, rgba(73, 65, 65, 0.85) 0%, rgba(245, 242, 242, 0) 100%);  */
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 2;
+   
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.85) 0%, rgba(0, 0, 0, 0) 100%);
+    color: var(--secondary);
+    margin: 0.5rem auto 0;
+}
+
+/* ========================================================= */
+/* FEATURED SHOWCASE SLIDER STYLES                           */
+/* ========================================================= */
+
+/* Reset & Box Sizing Isolation */
+.featured-showcase-root * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+
+/* Main Section Wrapper */
+.featured-showcase-root {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  margin: 1px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  isolation: isolate; /* Prevents z-index conflicts with other page elements */
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+
+/* Ambient Blurred Background Layer */
+.showcase-bg-backdrop {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 1;
+  filter: blur(2px) brightness(0.5);
+  z-index: 1;
+  transition: background-image 10s ease-in-out;
+  pointer-events: none;
+}
+
+/* Stage Viewport */
+.showcase-card-viewport {
+  position: relative;
+  width: 95%;
+  max-width: 1000px;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+/* Outer Slides Wrapper */
+.showcase-slides-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Card Styles & Transitions */
+.showcase-card {
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transform: scale(1);
+  transition: opacity 5s ease, transform 5s ease;
+  pointer-events: none;
+}
+
+/* Active Visible Card */
+.showcase-card.showcase-active {
+  opacity: 10;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+/* Card Image Fit */
+.showcase-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Bottom Text Overlay & Gradient */
+.showcase-text-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 32px 40px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%);
+  color: #ffffff;
+}
+
+.showcase-text-overlay h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: 6px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.showcase-location {
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  opacity: 0.85;
+}
+
+/* Navigation Buttons Style */
+.showcase-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.3);
+  border: none;
+  color: #ffffff;
+  font-size: 2rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.3s ease;
+}
+
+.showcase-nav-btn:hover {
+  background: rgba(217, 119, 6, 0.85);
+}
+
+.showcase-prev-btn { left: -25px; }
+.showcase-next-btn { right: -25px; }
+
+#CAROUSEL1{
+    margin-top: 60px;
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: bolder;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    position: relative;
+    margin-bottom: 2px ;
+    z-index: 2;
+}
+
+#CAROUSEL1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.85) 0%, rgba(0, 0, 0, 0) 100%);
+    color: #ffffff;
+    margin: 0.5rem auto 0;
+}
+
+/* Isolated namespace to avoid global page resets */
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.ls3d-wrapper * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.ls3d-wrapper {
+  position: relative;
+  /* Stretches to the full viewport width */
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50.55vw;
+  margin-right: -50vw;
+
+  height: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+/* Background image styling - low visibility to avoid interference */
+.ls3d-wrapper::before {
+ content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  /* Replace the URL below with your actual image path or link */
+  background-image: url('lonar-crater-lake-mumbai-maharashtra-1-attr-hero.jpg');
+  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  /* Opacity control: Increase if it is too faint (e.g., 0.35) */
+  opacity: 10; 
+  filter: blur(0px);
+  z-index: 0;
+}
+
+/* Vignette overlay for smooth edge fading */
+.ls3d-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(212, 199, 199, 0.2) 0%, rgba(66, 73, 64, 0.85) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.ls3d-viewport {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  z-index: 2;
+}
+
+.ls3d-item {
+  position: absolute;
+  width: 220px;
+  height: 380px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.5s ease;
+  user-select: none;
+}
+
+.ls3d-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.85);
+}
+
+.ls3d-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 20px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 100%);
+  color: #ffffff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.ls3d-item.ls3d-active .ls3d-overlay {
+  opacity: 1;
+}
+
+.ls3d-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.ls3d-action-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  color: #ffffff;
+  padding: 8px 20px;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.ls3d-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: #d97706;
+  font-size: 2.5rem;
+  cursor: pointer;
+  z-index: 10;
+  padding: 10px;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.ls3d-arrow-left { left: 20px; }
+.ls3d-arrow-right { right: 20px; }
+
+
+/* Footer */
+footer {
+    background-color: var(--secondary);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem;
+}
