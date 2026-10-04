@@ -1,0 +1,430 @@
+/* Global Setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #8e1c1c;
+    --accent-color: #b38b4d;
+    --heading-color: #4a2e18;
+    --text-color: #2c1a0c;
+    --bg-body: #fdfaf5;
+    --bg-card: #ffffff;
+    --shadow-md: 0 4px 15px rgba(0,0,0,0.06);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-body); 
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Header & Gradient Title */
+header {
+    background-color: var(--bg-main); /* Matches logo background */
+    border-bottom: 2px solid rgba(230, 126, 34, 0.3);
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow-sm);
+    backdrop-filter: blur(8px);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0.75rem 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Space between logo image and text */
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary);
+    text-decoration:none;
+}
+
+.logo-img {
+    height: 52px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 6px;
+}
+.brand-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    letter-spacing: -0.5px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--secondary);
+    font-weight: 500;
+    font-size: 0.95rem;
+    position: relative;
+    padding: 0.25rem 0;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Hero Slider Styles */
+.hero-slider {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    display: flex;
+    align-items: end;
+    padding-left: 3rem;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide-content h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    margin-bottom: 0.5rem;
+}
+
+.slide-content p {
+    font-size: 1.2rem;
+    color: #f0f0f0;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Dots Navigation */
+.slider-dots {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    display: flex;
+    gap: 8px;
+    z-index: 99; /* Higher z-index to stay above background overlays */
+}
+
+.dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 2px solid #ffffff;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: all 0.3s ease;
+}
+
+.dot.active, .dot:hover {
+    background-color: #ffffff;
+    transform: scale(1.2);
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.title{
+    background-color: #e7e1d8;
+    text-align: center;
+    margin-bottom: 0.3rem;
+}
+
+.main-content {
+    display: flex;
+    flex-direction:column;
+    grid-template-columns: 360px 1fr;
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    align-items:center;
+}
+
+/* Base Card - NO BORDER */
+.card {
+    background: var(--bg-card); 
+    padding: 0;
+    box-shadow: var(--shadow-md);
+    border: none; /* Removed borders completely */
+    overflow: hidden;
+}
+
+.card h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    color: var(--heading-color);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 8px;
+    display: inline-block;
+}
+
+
+/* -----------------------------------------
+   Right Content Area
+   ----------------------------------------- */
+.right-content-area {
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+}
+
+.right-content-area h2 {
+    color: #4a2e18;
+    font-weight: 700;
+    /* Soft light glow behind text */
+    text-shadow: 0px 1px 3px rgba(175, 67, 5, 0.9); 
+    
+}
+
+
+/* Card Background Overlays */
+.desc-bg {
+    background-image: url('https://img.marathijagran.com/2024/07/30_03_2023-mahabaleshwar_23371183.webp');
+    background-size: cover;
+    background-position: center;
+    border: none;
+    overflow: hidden;
+}
+
+.map-bg {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQydCurdqpfjXLCGYRg9YHJMACBpEuRce0n-9G9VJ0e0w&s=10');
+    background-size: cover;
+    background-position: center;
+    border: none;
+    overflow: hidden;
+}
+
+.content-overlay {
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    /* 1. Semi-transparent light mask over image */
+    background-color: rgba(194, 184, 170, 0.6); 
+}
+
+.description-text p {
+    margin-bottom: 15px;
+    color: #1a0c04 !important; /* Extremely dark brown for maximum contrast */
+    font-size: 1rem;
+    font-weight: 500; /* Increased weight for clarity */
+    line-height: 1.7;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+.map-container {
+    border: none; /* No border around map */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.list-title{
+    text-align: start;
+    padding: 1rem 0rem 1.2rem 1.25rem;
+    border: 2px dashed rgb(0, 0, 0);
+    background-color: #e7e1d8;
+}
+
+
+/* Filter Bar Centered Container */
+.category-filter-wrapper {
+    max-width: 1050px;
+    width: 90%;
+    margin: 2rem auto 1rem auto;
+    padding: 0 1rem;
+}
+
+.filter-tabs {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Pill Button Styling */
+.tab-btn {
+    padding: 0.55rem 1.6rem;
+    border-radius: 50px; /* Round pill shape */
+    border: 1.5px solid #f28033; /* Orange border matching reference image */
+    background-color: #ffffff;
+    color: #555555;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+    outline: none;
+}
+
+.tab-btn:hover {
+    background-color: #fff3eb;
+    color: #f28033;
+}
+
+/* Active State Pill */
+.tab-btn.active {
+    background-color: #f28033; /* Filled orange */
+    color: #ffffff;
+    border-color: #f28033;
+    box-shadow: 0 3px 8px rgba(242, 128, 51, 0.3);
+}
+
+/* Grid Container (2 Columns) */
+.heritage-grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    
+    width: 95%;
+    margin: 0 auto 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Individual Card Styling */
+.heritage-card {
+   position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 280px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.heritage-card:hover {
+   transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.heritage-card a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+/* Image behavior */
+.heritage-card img {
+   width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.heritage-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Dark Gradient Overlay for Readability */
+.heritage-card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem 1.25rem 1rem 1.25rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.4) 60%, transparent 100%);
+    color: #ffffff;
+}
+
+.heritage-card-overlay h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.heritage-card-overlay p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    color: #d1d1d1;
+    margin-top: 0.25rem;
+    font-weight: 400;
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--heading-color);
+    color: #e9e3d7;
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 40px;
+    border-top: 3px solid var(--accent-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+    .forts-sidebar {
+        position: static;
+        max-height: none;
+        padding: 70px 30px;
+    }
+}
+/* Responsive adjustment for small screens */
+@media (max-width: 600px) {
+    .heritage-grid-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .heritage-card {
+        height: 200px;
+    }
+}

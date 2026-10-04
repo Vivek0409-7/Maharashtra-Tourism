@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahalakshmi Temple Kolhapur | Sacred Shakti Peetha</title>
+    <link rel="stylesheet" href="shakti.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <span>🌺</span> Mahalakshmi Kolhapur
+        </div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#experiences">Experiences</a>
+            <a href="#schedule">Schedule</a>
+            <a href="#places">Places Around</a>
+            <a href="#stay">Stay & Hotels</a>
+            <a href="#reach">How to Reach</a>
+        </nav>
+        <div class="nav-buttons">
+            <button id="themeBtn" title="Change Theme">🌙</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/53/Mahalaxmi_Temple%2C_Kolhapur.jpg');">
+        <div class="hero-overlay"></div>
+        <div class="hero-content reveal">
+            <p class="hero-small">SACRED SHAKTI PEETHA</p>
+            <h1>KARVEER NIVASINI MAHALAKSHMI</h1>
+            <p>Experience the divine grace of Goddess Ambabai at the eternal sanctuary of prosperity and liberation in Kolhapur.</p>
+            <a href="#experiences" class="hero-btn">Explore Temple Highlights ↓</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="about-image reveal">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Mahalaxmi_Temple%2C_Kolhapur.jpg" alt="Kolhapur Mahalakshmi Temple">
+        </div>
+        <div class="about-content reveal">
+            <p class="section-label">THE LEGEND OF KARVEER</p>
+            <h2>Eternal Abode of Goddess Ambabai</h2>
+            <p>The Shri Mahalakshmi Temple of Kolhapur is one of the premier Shakti Peethas in India. According to ancient scriptures, Lord Vishnu and Goddess Lakshmi reside permanently in this holy land known as Karveer Kshetra.</p>
+            <p>Built in the 7th century during the Chalukya dynasty, the temple features intricate Hemadpanti architecture. The idol is crafted from gemstone and weighs roughly 40 kg, adorned with precious jewels during daily pujas.</p>
+            <p>A famous annual natural phenomenon named <em>Kirnotsav</em> occurs when the rays of the setting sun fall directly on the deity's feet, waist, and face twice a year.</p>
+            <a href="#schedule" class="text-btn">View Darshan Schedule →</a>
+        </div>
+    </section>
+
+    <!-- Interactive Experience Switcher Section -->
+    <section class="experience-section" id="experiences">
+        <div class="heading reveal">
+            <p class="section-label">DIVINE ATTRACTIONS</p>
+            <h2>Key Experiences at Kolhapur</h2>
+            <p>Select a highlight below to view details and image preview.</p>
+        </div>
+
+        <div class="featured-experience reveal">
+            <div class="featured-image">
+                <img id="experienceImage" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Mahalaxmi_Temple%2C_Kolhapur.jpg" alt="Experience Image">
+            </div>
+            <div class="featured-content">
+                <div class="experience-symbol" id="experienceIcon">🌺</div>
+                <p class="section-label" id="experienceNumber">EXPERIENCE 01</p>
+                <h3 id="experienceTitle">Alankar Pooja & Darshan</h3>
+                <p id="experienceDescription">Witness Goddess Ambabai draped in intricate gold and gemstone ornaments during special daily afternoon rituals.</p>
+            </div>
+        </div>
+
+        <div class="experience-cards">
+            <div class="experience-card active reveal" 
+                 data-title="Alankar Pooja & Darshan" 
+                 data-number="EXPERIENCE 01" 
+                 data-icon="🌺" 
+                 data-description="Witness Goddess Ambabai draped in intricate gold and gemstone ornaments during special daily afternoon rituals." 
+                 data-image="https://upload.wikimedia.org/wikipedia/commons/5/53/Mahalaxmi_Temple%2C_Kolhapur.jpg">
+                <div class="experience-card-image">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Mahalaxmi_Temple%2C_Kolhapur.jpg" alt="Alankar Pooja">
+                </div>
+                <div class="experience-card-content">
+                    <span>🌺</span>
+                    <h3>Alankar Pooja</h3>
+                    <p>Royal Dressing Ritual</p>
+                </div>
+            </div>
+
+            <div class="experience-card reveal" 
+                 data-title="Kirnotsav Festival" 
+                 data-number="EXPERIENCE 02" 
+                 data-icon="☀️" 
+                 data-description="A architectural wonder where setting sun rays illuminate the deity directly through temple stone windows." 
+                 data-image="https://upload.wikimedia.org/wikipedia/commons/5/53/Mahalaxmi_Temple%2C_Kolhapur.jpg">
+                <div class="experience-card-image">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Mahalaxmi_Temple%2C_Kolhapur.jpg" alt="Kirnotsav">
+                </div>
+                <div class="experience-card-content">
+                    <span>☀️</span>
+                    <h3>Kirnotsav</h3>
+                    <p>Sun Ray Phenomenon</p>
+                </div>
+            </div>
+
+            <div class="experience-card reveal" 
+                 data-title="Navratri Rathotsav" 
+                 data-number="EXPERIENCE 03" 
+                 data-icon="🛕" 
+                 data-description="Grand evening chariot procession carried out around the temple complex with music and thousands of devotees." 
+                 data-image="https://staticimg.amarujala.com/assets/images/2024/07/08/shirdi-sai-baba_5a880c13b18c44a366b0087894595f7f.jpeg">
+                <div class="experience-card-image">
+                    <img src="https://staticimg.amarujala.com/assets/images/2024/07/08/shirdi-sai-baba_5a880c13b18c44a366b0087894595f7f.jpeg" alt="Rathotsav">
+                </div>
+                <div class="experience-card-content">
+                    <span>🛕</span>
+                    <h3>Rathotsav</h3>
+                    <p>Chariot Procession</p>
+                </div>
+            </div>
+
+            <div class="experience-card reveal" 
+                 data-title="Kolhapuri Culinary & Heritage" 
+                 data-number="EXPERIENCE 04" 
+                 data-icon="🍲" 
+                 data-description="Explore local heritage markets near temple gates offering authentic Kolhapuri spices, chappals, and sweets." 
+                 data-image="https://upload.wikimedia.org/wikipedia/commons/5/53/Mahalaxmi_Temple%2C_Kolhapur.jpg">
+                <div class="experience-card-image">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Mahalaxmi_Temple%2C_Kolhapur.jpg" alt="Heritage Markets">
+                </div>
+                <div class="experience-card-content">
+                    <span>🍲</span>
+                    <h3>Heritage & Eats</h3>
+                    <p>Temple Street Culture</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section class="section" id="schedule">
+        <div class="heading reveal">
+            <p class="section-label">DAILY TIMINGS</p>
+            <h2>Temple Schedule & Pujas</h2>
+            <p>Plan your visit according to daily opening hours and ritual schedules.</p>
+        </div>
+
+        <div class="temple-grid">
+            <div class="temple-story reveal">
+                <span class="big-symbol">🌺</span>
+                <h3>Darshan Guidelines</h3>
+                <p><strong>Mukh Darshan:</strong> Continuous queue line available throughout the day from morning until closing.</p>
+                <p><strong>Abhishek Pujas:</strong> Performed early morning between 8:00 AM and 9:30 AM with advance booking options.</p>
+                <p><strong>Special Dress Code:</strong> Traditional attire is encouraged when entering inner sanctums for special pujas.</p>
+            </div>
+
+            <div class="temple-schedule reveal">
+                <div class="schedule-header">
+                    <span>🔱</span>
+                    <h3>Daily Ritual Timings</h3>
+                </div>
+                <div class="schedule-row"><span>Temple Gate Opening & Kakad Aarti</span><strong>04:30 AM</strong></div>
+                <div class="schedule-row"><span>Panchamrut Abhishek & Pooja</span><strong>08:30 AM – 09:30 AM</strong></div>
+                <div class="schedule-row"><span>Mahapooja & Naivedya</span><strong>11:30 AM – 01:00 PM</strong></div>
+                <div class="schedule-row"><span>Alankar Darshan</span><strong>01:30 PM – 05:00 PM</strong></div>
+                <div class="schedule-row"><span>Dhuparti & Evening Aarti</span><strong>07:30 PM – 08:30 PM</strong></div>
+                <div class="schedule-row"><span>Shejarti & Closing</span><strong>10:00 PM</strong></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Places Around & Map -->
+    <section class="section places" id="places">
+        <div class="heading reveal">
+            <p class="section-label">EXPLORE KOLHAPUR</p>
+            <h2>Attractions Near Temple</h2>
+        </div>
+
+        <div class="card-grid">
+            <div class="card reveal">
+                <div class="card-image"><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Mahalaxmi_Temple%2C_Kolhapur.jpg" alt="Rankala Lake"></div>
+                <div class="card-content">
+                    <h3>Rankala Lake</h3>
+                    <p>Historic lake offering sunset walks, boating, and street delicacies near Shalini Palace.</p>
+                </div>
+            </div>
+            <div class="card reveal">
+                <div class="card-image"><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Mahalaxmi_Temple%2C_Kolhapur.jpg" alt="New Palace"></div>
+                <div class="card-content">
+                    <h3>New Palace Museum</h3>
+                    <p>Grand Maratha palace displaying Royal Chhatrapati memorabilia, weapons, and royal artifacts.</p>
+                </div>
+            </div>
+            <div class="card reveal">
+                <div class="card-image"><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Mahalaxmi_Temple%2C_Kolhapur.jpg" alt="Panhala Fort"></div>
+                <div class="card-content">
+                    <h3>Panhala Fort</h3>
+                    <p>Scenic hill fort located 20 km from Kolhapur city rich in Maratha empire history.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="map-container reveal">
+            <h3>📍 Location Map: Mahalakshmi Temple, Kolhapur</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3821.684348512391!2d74.2215286!3d16.6947231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc1000f074d0001%3A0x6b306bc8ecb78913!2sShree%20Mahalaxmi%20Ambabai%20Temple!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <!-- Stay & Hotels -->
+    <section class="stay-section section" id="stay">
+        <div class="heading reveal">
+            <p class="section-label">ACCOMMODATION</p>
+            <h2>Hotels & Stays in Kolhapur</h2>
+        </div>
+
+        <div class="stay-grid">
+            <div class="stay-card reveal">
+                <div class="stay-icon">🏨</div>
+                <h3>Devsthan Bhakta Niwas</h3>
+                <p>Budget rooms operated directly by the temple trust located right next to the mandir premises.</p>
+                <span>📍 2 mins walk to temple</span>
+            </div>
+            <div class="stay-card reveal">
+                <div class="stay-icon">🏡</div>
+                <h3>City Center Hotels</h3>
+                <p>3-star and luxury boutique hotels with family suites available around Laxmipuri and Station Road.</p>
+                <span>📍 1.5 km to temple</span>
+            </div>
+            <div class="stay-card reveal">
+                <div class="stay-icon">🛏️️</div>
+                <h3>MTDC Tourist Resort</h3>
+                <p>Government approved comfortable accommodation with garden premises and secure vehicle parking.</p>
+                <span>📍 Nearby station area</span>
+            </div>
+        </div>
+
+        <div class="map-container reveal">
+            <h3>🏨 Hotels Nearby Kolhapur Temple</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d15286.737394088!2d74.221528!3d16.694723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1shotels%20near%20mahalakshmi%20temple%20kolhapur!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <!-- Reach Section -->
+    <section class="visit section" id="reach">
+        <div class="heading reveal">
+            <p class="section-label">TRAVEL GUIDE</p>
+            <h2>How to Reach Kolhapur</h2>
+        </div>
+
+        <div class="visit-grid">
+            <div class="visit-card reveal"><span>🚗</span><h3>By Road</h3><p>Direct highway connection via Mumbai-Bengaluru Highway (NH 48).</p></div>
+            <div class="visit-card reveal"><span>🚌</span><h3>By Bus</h3><p>Direct MSRTC Shivshahi and private luxury buses run daily from Pune, Mumbai, and Goa.</p></div>
+            <div class="visit-card reveal"><span>🚆</span><h3>By Rail</h3><p>Shri Chhatrapati Shahu Maharaj Terminus (Kolhapur Railway Station) connects major cities.</p></div>
+            <div class="visit-card reveal"><span>✈️</span><h3>By Air</h3><p>Kolhapur Airport (KLH) has direct daily flights connecting to Hyderabad, Tirupati, and Mumbai.</p></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-logo">🌺 Shri Mahalakshmi Devi Temple, Kolhapur</div>
+        <p>© 2026 Sacred Maharashtra Tourism Project</p>
+    </footer>
+
+    <script src="shakti.js"></script>
+</body>
+</html>

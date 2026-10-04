@@ -1,0 +1,242 @@
+/* Ashtavinayak Full-Width CSS (ashtavinayak.css) */
+/* Smooth Scroll & Fixed Header Padding Offset */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+/* Nav Link Hover & Focus Effects */
+.nav-links a {
+    position: relative;
+    padding: 0.3rem 0;
+    transition: color 0.2s ease;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+:root {
+    --primary: #d97706;
+    --primary-hover: #b45309;
+    --secondary-color: #7c2d12;
+    --bg-main: #fcfbf7;
+    --card-bg: #ffffff;
+    --text-main: #1f2937;
+    --text-muted: #6b7280;
+    --border-color: #e5e7eb;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.08);
+    --nav-bg: rgba(255, 255, 255, 0.92);
+}
+
+[data-theme="dark"] {
+    --bg-main: #0f172a;
+    --card-bg: #1e293b;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --border-color: #334155;
+    --secondary-color: #fb923c;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.4);
+    --nav-bg: rgba(15, 23, 42, 0.92);
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Header & Nav */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--nav-bg);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 3rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: var(--text-main);
+}
+
+.logo-img { height: 42px; width: auto; object-fit: contain; }
+.brand-title { font-size: 1.5rem; font-weight: 800; color: var(--primary); letter-spacing: 0.5px; }
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+}
+.nav-links a:hover { color: var(--primary); }
+
+.theme-btn {
+    border: 1px solid var(--border-color);
+    background: var(--card-bg);
+    color: var(--text-main);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+.theme-btn:hover { transform: scale(1.05); border-color: var(--primary); }
+
+/* Hero Banner */
+.temple-hero {
+    background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)),
+                url('https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+    color: #ffffff;
+    text-align: center;
+    padding: 12rem 5rem 8rem; 
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 4px solid var(--primary);
+}
+
+.temple-hero h1 { font-size: 3rem; font-weight: 800; margin: 0.8rem 0 0.4rem; }
+.temple-hero p { font-size: 1.2rem; opacity: 0.95; max-width: 900px; margin: 0 auto; }
+.stop-pill {
+    display: inline-block;
+    background: var(--primary);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 6px 18px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Layout Container */
+.temple-container { width: 100%; padding: 2rem 3rem; box-sizing: border-box; }
+
+/* Numbered Node Selector */
+.step-nodes { display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2.5rem; }
+.node {
+    width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    text-decoration: none; font-weight: 700; font-size: 1rem; border: 2px solid var(--primary);
+    color: var(--primary); background: var(--card-bg); box-shadow: var(--shadow-sm); transition: all 0.25s ease;
+}
+.node:hover, .node.active { background: var(--primary); color: #ffffff; transform: scale(1.1); }
+
+/* Blocks and Cards */
+.section-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2.5rem; }
+.full-width-block { grid-column: 1 / -1; }
+
+.info-block, .map-block, .details-card, .gallery-block {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+    box-sizing: border-box;
+}
+
+.info-text h2, .map-block h2, .details-card h2, .gallery-block h2 {
+    color: var(--secondary-color);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.overview-split { display: grid; grid-template-columns: 1.1fr 1fr; gap: 2.5rem; align-items: start; }
+.main-temple-img { width: 100%; height: 420px; object-fit: cover; border-radius: 14px; box-shadow: var(--shadow-sm); }
+
+/* Facts Grid */
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+.fact { border-left: 4px solid var(--primary); padding: 0.75rem 1rem; background: rgba(217, 119, 6, 0.08); border-radius: 0 8px 8px 0; }
+.fact span { display: block; font-size: 0.75rem; text-transform: uppercase; font-weight: 700; color: var(--text-muted); }
+.fact b { color: var(--secondary-color); font-size: 1rem; }
+
+/* Hotel Recommendations List */
+.hotel-list { display: flex; flex-direction: column; gap: 0.8rem; margin-top: 1rem; }
+.hotel-item {
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    background: rgba(217, 119, 6, 0.05);
+    border: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hotel-item span { font-size: 0.85rem; color: var(--text-muted); }
+
+/* Gallery Grid */
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.2rem; }
+.gallery-card { border-radius: 12px; overflow: hidden; background: var(--bg-main); border: 1px solid var(--border-color); }
+.gallery-card img { width: 100%; height: 220px; object-fit: cover; display: block; transition: transform 0.3s ease; }
+.gallery-card:hover img { transform: scale(1.04); }
+.gallery-card p { padding: 0.75rem 1rem; margin: 0; font-size: 0.9rem; color: var(--text-muted); text-align: center; }
+
+/* Maps Layout */
+.maps-container-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2.5rem; }
+.map-block iframe { width: 100%; height: 380px; border: 0; border-radius: 12px; margin-top: 0.8rem; }
+.map-note { color: var(--text-muted); font-size: 0.92rem; margin-bottom: 0.5rem; }
+.open-link { display: inline-block; margin-top: 1rem; color: var(--primary); font-weight: 700; text-decoration: none; }
+.open-link:hover { text-decoration: underline; }
+
+/* Pager Controls */
+.pager { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin: 3rem 0 1rem; }
+.pager-btn { padding: 0.85rem 1.8rem; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 1rem; background: var(--card-bg); color: var(--primary); border: 2px solid var(--primary); transition: all 0.2s ease; }
+.pager-btn:hover { background: var(--primary); color: #ffffff; }
+.pager-btn.primary { background: var(--primary); color: #ffffff; }
+.pager-btn.primary:hover { background: var(--primary-hover); border-color: var(--primary-hover); }
+
+footer { text-align: center; padding: 2rem 3rem; border-top: 1px solid var(--border-color); background: var(--card-bg); margin-top: 3rem; }
+
+@media (max-width: 1024px) {
+    .overview-split, .section-grid, .maps-container-grid { grid-template-columns: 1fr; }
+    .temple-container { padding: 1.5rem; }
+    nav { padding: 0.8rem 1.5rem; }
+}
+
+@media (max-width: 640px) {
+    .temple-hero h1 { font-size: 2rem; }
+    .nav-links { display: none; }
+    .pager { flex-direction: column; align-items: stretch; text-align: center; }
+}

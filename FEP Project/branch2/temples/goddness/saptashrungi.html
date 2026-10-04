@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saptashrungi Devi Temple Vani | Sacred Shakti Peetha</title>
+    <link rel="stylesheet" href="shakti.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <span>🏔️</span> Saptashrungi Vani
+        </div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#experiences">Experiences</a>
+            <a href="#schedule">Schedule</a>
+            <a href="#places">Places Around</a>
+            <a href="#stay">Stay & Hotels</a>
+            <a href="#reach">How to Reach</a>
+        </nav>
+        <div class="nav-buttons">
+            <button id="themeBtn" title="Change Theme">🌙</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/06/Goddess_Saptashrungi_Devi_Temple1.jpg');">
+        <div class="hero-overlay"></div>
+        <div class="hero-content reveal">
+            <p class="hero-small">MOUNTAIN SHAKTI PEETHA</p>
+            <h1>SAPTASHRUNGI NIVASINI DEVI</h1>
+            <p>Ascend the seven mountain peaks of Sahyadri to seek blessings of the eighteen-armed Goddess in Vani, Nashik.</p>
+            <a href="#experiences" class="hero-btn">Explore Mountain Shrine ↓</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="about-image reveal">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/Goddess_Saptashrungi_Devi_Temple1.jpg" alt="Saptashrungi Devi Temple">
+        </div>
+        <div class="about-content reveal">
+            <p class="section-label">ABODE OF SEVEN PEAKS</p>
+            <h2>The Rock Carved Goddess of Sahyadri</h2>
+            <p>Shree Saptashrungi Nivasini Devi resides on a high cliff surrounded by seven mountain peaks ('Sapta-Shrunga') in the Western Ghats of Nashik district.</p>
+            <p>The deity idol is eight feet tall and carved directly onto the natural rock wall, featuring eighteen arms holding weapons granted by celestial gods.</p>
+            <p>Devotees traditionally ascend roughly 500 stone steps to reach the hilltop sanctum, or take the modern funicular ropeway system.</p>
+            <a href="#schedule" class="text-btn">View Ritual Schedule →</a>
+        </div>
+    </section>
+
+    <!-- Interactive Experience Switcher Section -->
+    <section class="experience-section" id="experiences">
+        <div class="heading reveal">
+            <p class="section-label">DIVINE ATTRACTIONS</p>
+            <h2>Mountain Pilgrimage Highlights</h2>
+            <p>Click any highlight to preview images and information.</p>
+        </div>
+
+        <div class="featured-experience reveal">
+            <div class="featured-image">
+                <img id="experienceImage" src="https://upload.wikimedia.org/wikipedia/commons/0/06/Goddess_Saptashrungi_Devi_Temple1.jpg" alt="Experience Image">
+            </div>
+            <div class="featured-content">
+                <div class="experience-symbol" id="experienceIcon">🚠</div>
+                <p class="section-label" id="experienceNumber">EXPERIENCE 01</p>
+                <h3 id="experienceTitle">Funicular Ropeway Ride</h3>
+                <p id="experienceDescription">Enjoy a panoramic high-altitude trolley ride whisking pilgrims safely up the vertical cliff face in just 3 minutes.</p>
+            </div>
+        </div>
+
+        <div class="experience-cards">
+            <div class="experience-card active reveal" 
+                 data-title="Funicular Ropeway Ride" 
+                 data-number="EXPERIENCE 01" 
+                 data-icon="🚠" 
+                 data-description="Enjoy a panoramic high-altitude trolley ride whisking pilgrims safely up the vertical cliff face in just 3 minutes." 
+                 data-image="https://upload.wikimedia.org/wikipedia/commons/0/06/Goddess_Saptashrungi_Devi_Temple1.jpg">
+                <div class="experience-card-image">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/Goddess_Saptashrungi_Devi_Temple1.jpg" alt="Ropeway Ride">
+                </div>
+                <div class="experience-card-content">
+                    <span>🚠</span>
+                    <h3>Funicular Ropeway</h3>
+                    <p>Scenic Mountain Transit</p>
+                </div>
+            </div>
+
+            <div class="experience-card reveal" 
+                 data-title="Chaitra Purnima Utsav" 
+                 data-number="EXPERIENCE 02" 
+                 data-icon="🌕" 
+                 data-description="Annual spring festival where thousands gather at the mountain peak for night-long prayers and flag hoisting." 
+                 data-image="https://staticimg.amarujala.com/assets/images/2024/07/08/shirdi-sai-baba_5a880c13b18c44a366b0087894595f7f.jpeg">
+                <div class="experience-card-image">
+                    <img src="https://staticimg.amarujala.com/assets/images/2024/07/08/shirdi-sai-baba_5a880c13b18c44a366b0087894595f7f.jpeg" alt="Chaitra Purnima">
+                </div>
+                <div class="experience-card-content">
+                    <span>🌕</span>
+                    <h3>Chaitra Purnima</h3>
+                    <p>Spring Mountain Yatra</p>
+                </div>
+            </div>
+
+            <div class="experience-card reveal" 
+                 data-title="500 Step Pilgrimage Trek" 
+                 data-number="EXPERIENCE 03" 
+                 data-icon="🥾" 
+                 data-description="Traditional stone stair climb lined with brass bell canopies and mountain valley viewpoints." 
+                 data-image="https://upload.wikimedia.org/wikipedia/commons/0/06/Goddess_Saptashrungi_Devi_Temple1.jpg">
+                <div class="experience-card-image">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/Goddess_Saptashrungi_Devi_Temple1.jpg" alt="Stairway Trek">
+                </div>
+                <div class="experience-card-content">
+                    <span>🥾</span>
+                    <h3>Step Climb Trek</h3>
+                    <p>Traditional Pilgrimage</p>
+                </div>
+            </div>
+
+            <div class="experience-card reveal" 
+                 data-title="Saptashrungi Cliff Point" 
+                 data-number="EXPERIENCE 04" 
+                 data-icon="🏔️" 
+                 data-description="Breathtaking mountain atmosphere overlooking the lush green forests of Vani plateau." 
+                 data-image="https://upload.wikimedia.org/wikipedia/commons/0/06/Goddess_Saptashrungi_Devi_Temple1.jpg">
+                <div class="experience-card-image">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/Goddess_Saptashrungi_Devi_Temple1.jpg" alt="Mountain Cliff">
+                </div>
+                <div class="experience-card-content">
+                    <span>🏔️</span>
+                    <h3>Seven Peaks</h3>
+                    <p>Sahyadri Landscape</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section class="section" id="schedule">
+        <div class="heading reveal">
+            <p class="section-label">DAILY TIMINGS</p>
+            <h2>Saptashrungi Temple Schedule</h2>
+        </div>
+
+        <div class="temple-grid">
+            <div class="temple-story reveal">
+                <span class="big-symbol">🏔️</span>
+                <h3>Darshan Guidelines</h3>
+                <p><strong>Mountain Timing:</strong> Temple doors open at 5:00 AM daily. Ropeway service operates continuous round trips.</p>
+                <p><strong>Sindoor Application:</strong> The idol is coated with natural red vermillion (Sindoor) during special periodic rituals.</p>
+            </div>
+
+            <div class="temple-schedule reveal">
+                <div class="schedule-header"><span>🔱</span><h3>Daily Schedule</h3></div>
+                <div class="schedule-row"><span>Temple Opening & Kakad Aarti</span><strong>05:00 AM</strong></div>
+                <div class="schedule-row"><span>Morning Panchamrut Pooja</span><strong>07:00 AM – 08:30 AM</strong></div>
+                <div class="schedule-row"><span>Maha Naivedya & Afternoon Aarti</span><strong>12:00 PM – 01:00 PM</strong></div>
+                <div class="schedule-row"><span>Evening Dhuparti</span><strong>07:00 PM – 07:30 PM</strong></div>
+                <div class="schedule-row"><span>Shejarti & Closing</span><strong>09:30 PM</strong></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Places Around & Map -->
+    <section class="section places" id="places">
+        <div class="heading reveal">
+            <p class="section-label">EXPLORE NASHIK REGION</p>
+            <h2>Attractions Nearby</h2>
+        </div>
+
+        <div class="card-grid">
+            <div class="card reveal">
+                <div class="card-image"><img src="https://upload.wikimedia.org/wikipedia/commons/0/06/Goddess_Saptashrungi_Devi_Temple1.jpg" alt="Markandeya Hill"></div>
+                <div class="card-content">
+                    <h3>Markandeya Hill</h3>
+                    <p>Neighboring mountain peak where Sage Markandeya composed sacred scriptures.</p>
+                </div>
+            </div>
+            <div class="card reveal">
+                <div class="card-image"><img src="https://upload.wikimedia.org/wikipedia/commons/0/06/Goddess_Saptashrungi_Devi_Temple1.jpg" alt="Panchavati Nashik"></div>
+                <div class="card-content">
+                    <h3>Panchavati & Ramkund (Nashik)</h3>
+                    <p>Sacred Ramayana site situated in Nashik city 60 km from Vani hill.</p>
+                </div>
+            </div>
+            <div class="card reveal">
+                <div class="card-image"><img src="https://upload.wikimedia.org/wikipedia/commons/0/06/Goddess_Saptashrungi_Devi_Temple1.jpg" alt="Trimbakeshwar"></div>
+                <div class="card-content">
+                    <h3>Trimbakeshwar Jyotirlinga</h3>
+                    <p>Holy Lord Shiva Jyotirlinga shrine located roughly 85 km from Saptashrungi hill.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="map-container reveal">
+            <h3>📍 Location Map: Saptashrungi Devi Temple, Vani</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.6321!2d73.9062!3d20.3875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdde123456789ab%3A0x1234567890abcdef!2sSaptashrungi%20Devi%20Temple!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <!-- Stay & Hotels -->
+    <section class="stay-section section" id="stay">
+        <div class="heading reveal">
+            <p class="section-label">ACCOMMODATION</p>
+            <h2>Hotels & Stays in Vani & Hilltop</h2>
+        </div>
+
+        <div class="stay-grid">
+            <div class="stay-card reveal"><div class="stay-icon">🏨</div><h3>Trust Bhakta Niwas</h3><p>Clean and budget-friendly dormitory rooms located at both foothill and hilltop levels.</p><span>📍 Base & Hill Top</span></div>
+            <div class="stay-card reveal"><div class="stay-icon">🏡</div><h3>Vani Village Hotels</h3><p>Comfortable budget guest houses and private hotels situated in Vani town base.</p><span>📍 10 km to Hilltop</span></div>
+            <div class="stay-card reveal"><div class="stay-icon">🛏️</div><h3>Nashik City Luxury Hotels</h3><p>Star category accommodations available in Nashik city for day travelers.</p><span>📍 60 km to Temple</span></div>
+        </div>
+
+        <div class="map-container reveal">
+            <h3>🏨 Hotels Nearby Saptashrungi Vani</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d30000.000000!2d73.900000!3d20.380000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1shotels%20near%20saptashrungi%20temple%20vani!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <!-- Reach Section -->
+    <section class="visit section" id="reach">
+        <div class="heading reveal">
+            <p class="section-label">TRAVEL GUIDE</p>
+            <h2>How to Reach Saptashrungi</h2>
+        </div>
+
+        <div class="visit-grid">
+            <div class="visit-card reveal"><span>🚗</span><h3>By Road</h3><p>Well connected asphalt roads via Nashik - Dindori - Vani route.</p></div>
+            <div class="visit-card reveal"><span>🚌</span><h3>By Bus</h3><p>Frequent MSRTC buses ply continuously from Nashik CBS bus stand directly to hill base.</p></div>
+            <div class="visit-card reveal"><span>🚆</span><h3>By Rail</h3><p>Nashik Road Railway Station (65 km) is connected to all major Indian cities.</p></div>
+            <div class="visit-card reveal"><span>✈️</span><h3>By Air</h3><p>Nashik Ozar Airport (ISK) is nearest (45 km) with direct flights from major cities.</p></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-logo">🏔️ Shree Saptashrungi Nivasini Devi, Vani</div>
+        <p>© 2026 Sacred Maharashtra Tourism Project</p>
+    </footer>
+
+    <script src="shakti.js"></script>
+</body>
+</html>
